@@ -175,6 +175,8 @@ img {
   background: var(--main-gray);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .code {
@@ -195,6 +197,38 @@ img {
 .project-title {
   font-size: 2rem;
   padding: 2rem 0.5rem;
+}
+
+.cardContainer {
+  position: relative;
+}
+
+.card {
+  z-index: 100;
+  position: relative;
+  padding-top: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 20px 2px #dadada;
+  transition: all 0.2s ease-in-out;
+}
+
+.backCard {
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.cardContainer:hover .backCard {
+  transform: translate(-2rem, -8rem) rotate(-2deg);
+}
+
+.cardContainer:hover .card {
+  transform: translate(3rem, 7rem) rotate(15deg);
 }
 
 .btn {
