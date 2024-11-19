@@ -16,23 +16,30 @@
       href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js"></script> <!-- Make sure the path is correct -->
+
+
   </head>
   <body>
-    <nav id="navbar" class="nav">
+    <nav class="nav">
       <ul class="nav-list">
-        <li>
-          <a href="#welcome-section">About</a>
-        </li>
-        <li>
-          <a href="#projects">Work</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      
+      <!-- Centered Logo -->
+      <div class="logo">
+        <img src="logo.png" alt="Nikan Logo" />
+      </div>
+    
+      <!-- Toggle Button -->
+      <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
     </nav>
+    
+    
 
-    <section class="welcome-section">
+    <section class="welcome-section" id="home">
       <div class="welcome-text">
           <h1>Welcome to My Portfolio</h1>
           <h2>NIKAN EMAMI, Your Front-End Developer</h2>

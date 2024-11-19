@@ -13,6 +13,25 @@
   --text-muted: #b8b8b8;
 }
 
+/* Light Theme Variables */
+body.light-mode {
+  --primary-white: #1c1c1e;
+  --primary-gray: #e5e5e5;
+  --secondary-dark: #ffffff;
+  --highlight-blue: #007aff;
+  --highlight-orange: #ff6a00;
+  --deep-gray: #f5f5f5;
+  --gradient-start: #ffffff;
+  --gradient-end: #f1f1f1;
+  --button-hover: #007aff;
+  --soft-gray: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --text-muted: #4f4f4f;
+  
+  background-color: var(--secondary-dark);
+  background-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +50,7 @@ body {
   line-height: 1.6;
   background-color: var(--secondary-dark);
   background-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2 {
@@ -61,9 +80,12 @@ a:hover {
   color: var(--highlight-blue);
 }
 
+/* Navigation Bar */
+
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keep the links on the left and button on the right */
+  align-items: center; /* Vertically center the items */
   position: fixed;
   top: 0;
   left: 0;
@@ -71,9 +93,9 @@ a:hover {
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 10;
-  border-radius: 20px 20px 0 0;
   padding: 1rem 5%;
   backdrop-filter: blur(10px);
+  
 }
 
 .nav-list {
@@ -95,6 +117,62 @@ a:hover {
   border-radius: 12px;
 }
 
+/* Centered Logo */
+.logo {
+  position: absolute;
+  left: 50%; /* Position in the center horizontally */
+  transform: translateX(-50%); /* Adjust to truly center the element */
+  max-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 70px;
+  height: auto;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  font-size: 2rem;
+  padding: 1rem;
+  width: 50px;
+  align-self: center;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background: var(--highlight-blue);
+  color: var(--primary-white);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--highlight-orange);
+}
+
+
+/* Theme Toggle Button */
+.theme-toggle {
+  font-size: 2rem;
+  padding: 1rem;
+  width: 50px;
+  align-self: center;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background: var(--highlight-blue);
+  color: var(--primary-white);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--highlight-orange);
+}
+
+/* Welcome Section */
 .welcome-section {
   display: flex;
   justify-content: center;
@@ -102,7 +180,7 @@ a:hover {
   height: 100vh;
   flex-direction: column;
   text-align: center;
-  background: linear-gradient(135deg, #111, #222);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   position: relative;
   overflow: hidden;
 }
@@ -144,7 +222,6 @@ a:hover {
   }
 }
 
-
 .welcome-text .subheading {
   font-size: 2.2rem;
   color: var(--primary-white);
@@ -177,8 +254,6 @@ a:hover {
   outline: none;
 }
 
-
-
 .welcome-section:before {
   content: '';
   position: absolute;
@@ -193,7 +268,7 @@ a:hover {
   z-index: -1;
 }
 
-
+/* Projects Section */
 .projects-section {
   padding: 10rem 2rem;
   background: var(--deep-gray);
@@ -251,22 +326,7 @@ a:hover {
   line-height: 1.4;
 }
 
-.btn-show-all {
-  font-size: 2rem;
-  padding: 1rem 3rem;
-  background: var(--highlight-blue);
-  color: var(--primary-white);
-  border-radius: 3rem;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-show-all:hover {
-  background: var(--highlight-orange);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
+/* Contact Section */
 .contact-section {
   display: flex;
   justify-content: center;
@@ -302,6 +362,7 @@ a:hover {
   color: var(--highlight-blue);
 }
 
+/* Footer */
 footer {
   display: flex;
   justify-content: space-evenly;
@@ -310,15 +371,6 @@ footer {
   background: var(--deep-gray);
   color: var(--primary-white);
   border-top: 4px solid var(--highlight-blue);
-  box-shadow: 0 2px 5px var(--card-shadow);
-}
-
-footer p {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-footer i {
-  vertical-align: middle;
-  color: var(--highlight-orange);
+  box-shadow: 0 2px 4px var(--card-shadow);
+  font-size: 1.6rem;
 }
