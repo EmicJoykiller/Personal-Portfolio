@@ -374,3 +374,100 @@ footer {
   box-shadow: 0 2px 4px var(--card-shadow);
   font-size: 1.6rem;
 }
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 6rem;
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .cta-btn {
+    font-size: 1.8rem;
+    padding: 1.2rem 3.5rem;
+  }
+
+  .welcome-text h1, .welcome-text h2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .cta-btn {
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+  }
+
+  .welcome-text h1, .welcome-text h2 {
+    font-size: 4rem;
+  }
+  
+  .nav {
+    flex-direction: column;
+    padding: 1rem 3%;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-list a {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .cta-btn {
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .welcome-text h1, .welcome-text h2 {
+    font-size: 3.2rem;
+  }
+
+  .contact-details {
+    font-size: 1.8rem;
+  }
+}
