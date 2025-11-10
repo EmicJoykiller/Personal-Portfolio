@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nikan Emami Portfolio</title>
+
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -16,85 +20,86 @@
       href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- Navigation -->
     <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <div class="logo">
+    <img src="assets/logo.png" alt="Nikan Logo" />
+  </div>
 
-      <div class="logo">
-        <img src="assets/logo.png" alt="Nikan Logo" />
-      </div>
+  <button class="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</button>
 
-      <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
-    </nav>
+  <ul class="nav-list" role="menu">
+    <li role="none"><a role="menuitem" href="#welcome">Home</a></li>
+    <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+    <li role="none"><a role="menuitem" href="#mini-projects">UI Components</a></li>
+    <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+  </ul>
 
-    <section class="welcome-section" id="home">
-      <div class="welcome-text">
-        <h1>Welcome to My Portfolio</h1>
-        <h2>NIKAN EMAMI, Your Front-End Developer</h2>
-        <p class="subheading">
-          Explore my work, and let's create something amazing together.
+  <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+</nav>
+
+
+
+
+    <!-- Landing / Welcome Section -->
+    <section id="welcome" aria-label="Welcome Section">
+      <h1>Nikan Emami</h1>
+      <h2>Front-End Developer</h2>
+      <p class="tagline">Crafting intuitive, performant web experiences with passion.</p>
+      <a href="#projects" class="btn-primary" role="button">See My Work</a>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" aria-label="About Me Section">
+      <div class="about-content">
+        <h3>About Me</h3>
+        <p>
+          I am a passionate Front-End Developer with over 3 years of experience crafting intuitive and high-performance web applications. Skilled in React, JavaScript (ES6+), HTML5, and CSS3, I thrive at transforming complex design challenges into seamless user experiences.<br /><br />
+          My development philosophy centers on clean, maintainable code and optimizing performance without sacrificing accessibility or design. I enjoy working in collaborative agile teams where open communication and continuous learning drive success.<br /><br />
+          Currently, I am focused on deepening my expertise in React ecosystems and expanding into full-stack development, aiming to deliver scalable solutions that solve real-world problems. Outside of coding, I’m a creative thinker who values attention to detail and always seeks to innovate.
         </p>
-        <div class="cta">
-          <a href="#projects" class="cta-btn">See My Projects</a>
-        </div>
       </div>
     </section>
 
+    <!-- Featured Projects Section -->
     <section id="projects" class="projects-section">
       <h2 class="projects-section-header">
-        "Presented below are examples of projects to which I have devoted
-        substantial effort and expertise."
+        "Presented below are examples of projects to which I have devoted substantial effort and expertise."
       </h2>
 
       <div class="projects-grid">
+        <!-- Project 1: Eye Bo -->
         <a
-          href="https://intro-section-with-dropdown-navigation-sable.vercel.app/"
+          href="https://eye-bo.vercel.app/"
           target="_blank"
           class="project project-tile"
+          rel="noopener noreferrer"
         >
           <img
             class="project-image"
-            src="/assets/intro-section-with-dropdown-navigation.png"
-            alt="Intro Section With Dropdown Navigation"
+            src="assets/Eye Bo.PNG"
+            alt="Eye Bo"
           />
           <p class="project-title">
             <span class="code">&lt;</span>
-            Intro Section With Dropdown Navigation
+            Eye Bo
             <span class="code">&#47;&gt;</span>
           </p>
         </a>
 
-        <a
-          href="https://huddle-landing-page-fawn-psi.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/huddle-landing-page-with-feature-blocks.png"
-            alt="Huddle Landing Page"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Huddle Landing Page
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
+        <!-- Project 2: Crowdfunding Product Page -->
         <a
           href="https://crowdfunding-product-page-woad.vercel.app/"
           target="_blank"
           class="project project-tile"
+          rel="noopener noreferrer"
         >
           <img
             class="project-image"
-            src="/assets/crowdfunding-product-page.png"
+            src="assets/crowdfunding-product-page.png"
             alt="Crowdfunding Product Page"
           />
           <p class="project-title">
@@ -104,14 +109,16 @@
           </p>
         </a>
 
+        <!-- Project 3: URL Shortening API Landing Page -->
         <a
           href="https://url-shortening-api-landing-page-tau-red.vercel.app/"
           target="_blank"
           class="project project-tile"
+          rel="noopener noreferrer"
         >
           <img
             class="project-image"
-            src="/assets/url-shortening-api.png"
+            src="assets/url-shortening-api.png"
             alt="URL Shortening API Landing Page"
           />
           <p class="project-title">
@@ -121,116 +128,16 @@
           </p>
         </a>
 
-        <a
-          href="https://news-homepage-topaz-mu.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/news-homepage.png"
-            alt="News Homepage"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            News Homepage
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://sunnyside-agency-landing-page-six-ashy.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/sunnyside-agency-landing-page.png"
-            alt="Sunnyside Agency Landing Page"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Sunnyside Agency Landing Page
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://intro-component-with-sign-up-form-sandy-ten.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/intro-component-with-sign-up-form.png"
-            alt="Intro Component With Sign Up Form"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Intro Component With Sign Up Form
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://base-apparel-coming-soon-page-gamma-rosy.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/base-apparel-coming-soon.png"
-            alt="Base Apparel Coming Soon Page"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Base Apparel Coming Soon Page
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://fylo-dark-theme-landing-page-navy-nine.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets//fylo-dark-theme-landing-page.png"
-            alt="Fylo Dark Theme Landing Page"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Fylo Dark Theme Landing Page
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://time-tracking-dashboard-beta-flax.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/time-tracking-dashboard.jpg"
-            alt="Time Tracking Dashboard"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Time Tracking Dashboard
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
+        <!-- Project 4: Estate Real State -->
         <a
           href="https://estate-real-state.vercel.app/"
           target="_blank"
           class="project project-tile"
+          rel="noopener noreferrer"
         >
           <img
             class="project-image"
-            src="/assets/Estate Real State.PNG"
+            src="assets/Estate Real State.PNG"
             alt="Estate Real State"
           />
           <p class="project-title">
@@ -239,355 +146,210 @@
             <span class="code">&#47;&gt;</span>
           </p>
         </a>
+      </div>
+    </section>
 
+    <!-- Mini UI Components Carousel Section -->
+    <section id="mini-projects" class="mini-projects-section">
+      <h2 class="projects-section-header" style="border-color: var(--highlight-orange);">
+        Mini Project UI Components
+      </h2>
+
+      <div class="mini-projects-carousel" aria-label="Mini Project UI Components Carousel">
+        <!-- First set of mini project cards -->
         <a
-          href="https://pok-mon-search-app-tan.vercel.app/"
+          href="https://intro-section-with-dropdown-navigation-sable.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Intro Section With Dropdown Navigation"
         >
           <img
-            class="project-image"
-            src="/assets/Pokemon Search APP.PNG"
-            alt="Pokemon Search APP"
+            src="assets/intro-section-with-dropdown-navigation.png"
+            alt="Intro Section With Dropdown Navigation"
           />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Pokemon Search APP
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <p>Intro Section With Dropdown Navigation</p>
         </a>
 
         <a
-          href="https://ip-address-tracker-eight-jade.vercel.app/"
+          href="https://huddle-landing-page-fawn-psi.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Huddle Landing Page"
         >
-          <img
-            class="project-image"
-            src="/assets/ip-address-tracker.png"
-            alt="IP Address Tracker"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            IP Address Tracker
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <img src="assets/huddle-landing-page-with-feature-blocks.png" alt="Huddle Landing Page" />
+          <p>Huddle Landing Page</p>
         </a>
 
         <a
-          href="https://eye-bo.vercel.app/"
+          href="https://news-homepage-topaz-mu.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="News Homepage"
         >
-          <img class="project-image" src="/assets/Eye Bo.PNG" alt="Eye Bo" />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Eye Bo
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://huddle-landing-page-with-a-single-introductory-two.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/huddle-landing-page-with-a-single-introductory-section.png"
-            alt="Huddle Landing Page With A Single Introductory"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Huddle Landing Page With A Single Introductory
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://rest-countries-api-olive-ten.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/rest-countries.png"
-            alt="Rest Countries API"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Rest Countries API
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://steve-jobs-tribute-page.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/steve-jobs-tribute-page.png"
-            alt="Steve Jobs Tribute Page"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Steve Jobs Tribute Page
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://fylo-landing-page-amber-two.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/fylo-landing-page-with-two-column-layout.png"
-            alt="Fylo Landing Page"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Fylo Landing Page
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://testimonials-grid-section-mauve.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/testimonials-grid-section.jpg"
-            alt="Testimonials Grid Section"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Testimonials Grid Section
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://fylo-data-storage-component-woad-six.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/fylo-data-storage-component.png"
-            alt="Fylo Data Storage Component"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Fylo Data Storage Component
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <img src="assets/news-homepage.png" alt="News Homepage" />
+          <p>News Homepage</p>
         </a>
 
         <a
           href="https://faq-accordion-card-eight-wine.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="FAQ Accordion Card"
         >
-          <img
-            class="project-image"
-            src="/assets/faq-accordion-card.png"
-            alt="FAQ Accordion Card"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            FAQ Accordion Card
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://results-summary-component-omega-ruby.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/results-summary-component.jpg"
-            alt="Results Summary Component"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Results Summary Component
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <img src="assets/faq-accordion-card.png" alt="FAQ Accordion Card" />
+          <p>FAQ Accordion Card</p>
         </a>
 
         <a
           href="https://pricing-component-with-toggle-peach.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Pricing Component With Toggle"
         >
-          <img
-            class="project-image"
-            src="/assets/pricing-component-with-toggle.png"
-            alt="Pricing Component With Toggle"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Pricing Component With Toggle
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <img src="assets/pricing-component-with-toggle.png" alt="Pricing Component With Toggle" />
+          <p>Pricing Component With Toggle</p>
         </a>
 
         <a
           href="https://social-proof-section-psi-nine.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Social Proof Section"
         >
-          <img
-            class="project-image"
-            src="/assets/social-proof-section.png"
-            alt="Social Proof Section"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Social Proof Section
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <img src="assets/social-proof-section.png" alt="Social Proof Section" />
+          <p>Social Proof Section</p>
         </a>
 
         <a
           href="https://3-column-preview-card-component-ten-xi.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="3 Column Preview Card Component"
         >
-          <img
-            class="project-image"
-            src="/assets/3-column-card-component.png"
-            alt="3 Column Preview Card Component"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            3 Column Preview Card Component
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://product-preview-card-flax-nu.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/product-preview-card.jpg"
-            alt="Product Preview Card"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Product Preview Card
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://interactive-rating-component-six-phi.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets//interactive-rating-component.png"
-            alt="Interactive Rating Component"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Interactive Rating Component
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://newsletter-sign-up-form-with-success-message-teal.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/newsletter-sign-up-form-with-success-message.PNG"
-            alt="Newsletter Sign Up Form With Success Message"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Newsletter Sign Up Form With Success Message
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-
-        <a
-          href="https://faq-accordion-sigma-taupe.vercel.app/"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="/assets/FAQ Accordion Component!.jpg"
-            alt="FAQ Accordion Component"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            FAQ Accordion Component
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <img src="assets/3-column-card-component.png" alt="3 Column Preview Card Component" />
+          <p>3 Column Preview Card Component</p>
         </a>
 
         <a
           href="https://contact-form-teal-beta.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Contact Form"
+        >
+          <img src="assets/contact-form.jpg" alt="Contact Form" />
+          <p>Contact Form</p>
+        </a>
+
+        <!-- Duplicate set for smooth continuous scroll -->
+        <a
+          href="https://intro-section-with-dropdown-navigation-sable.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Intro Section With Dropdown Navigation"
         >
           <img
-            class="project-image"
-            src="/assets/contact-form.jpg"
-            alt="contact-form"
+            src="assets/intro-section-with-dropdown-navigation.png"
+            alt="Intro Section With Dropdown Navigation"
           />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Contact Form
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <p>Intro Section With Dropdown Navigation</p>
         </a>
 
         <a
-          href="https://social-links-profile-jet-five.vercel.app/"
+          href="https://huddle-landing-page-fawn-psi.vercel.app/"
           target="_blank"
-          class="project project-tile"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Huddle Landing Page"
         >
-          <img
-            class="project-image"
-            src="/assets/social-links-profile.PNG"
-            alt="Social Links Profile"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Social Links Profile
-            <span class="code">&#47;&gt;</span>
-          </p>
+          <img src="assets/huddle-landing-page-with-feature-blocks.png" alt="Huddle Landing Page" />
+          <p>Huddle Landing Page</p>
+        </a>
+
+        <a
+          href="https://news-homepage-topaz-mu.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="News Homepage"
+        >
+          <img src="assets/news-homepage.png" alt="News Homepage" />
+          <p>News Homepage</p>
+        </a>
+
+        <a
+          href="https://faq-accordion-card-eight-wine.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="FAQ Accordion Card"
+        >
+          <img src="assets/faq-accordion-card.png" alt="FAQ Accordion Card" />
+          <p>FAQ Accordion Card</p>
+        </a>
+
+        <a
+          href="https://pricing-component-with-toggle-peach.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Pricing Component With Toggle"
+        >
+          <img src="assets/pricing-component-with-toggle.png" alt="Pricing Component With Toggle" />
+          <p>Pricing Component With Toggle</p>
+        </a>
+
+        <a
+          href="https://social-proof-section-psi-nine.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Social Proof Section"
+        >
+          <img src="assets/social-proof-section.png" alt="Social Proof Section" />
+          <p>Social Proof Section</p>
+        </a>
+
+        <a
+          href="https://3-column-preview-card-component-ten-xi.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="3 Column Preview Card Component"
+        >
+          <img src="assets/3-column-card-component.png" alt="3 Column Preview Card Component" />
+          <p>3 Column Preview Card Component</p>
+        </a>
+
+        <a
+          href="https://contact-form-teal-beta.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-project-card"
+          title="Contact Form"
+        >
+          <img src="assets/contact-form.jpg" alt="Contact Form" />
+          <p>Contact Form</p>
         </a>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <div class="contact-section-header">
         <h2>Ready to Create Something Amazing?</h2>
         <p>Let's build the future, one project at a time.</p>
       </div>
       <div class="contact-links">
-        <a
-          href="https://www.instagram.com/emicjoykiller/"
-          target="_blank"
-          class="btn contact-details"
+        <a href="https://www.instagram.com/emicjoykiller/" target="_blank" class="btn contact-details" rel="noopener noreferrer"
           ><i class="fab fa-instagram"></i> Instagram</a
         >
         <a
@@ -595,17 +357,19 @@
           href="https://github.com/EmicJoykiller"
           target="_blank"
           class="btn contact-details"
+          rel="noopener noreferrer"
           ><i class="fab fa-github"></i> GitHub</a
         >
         <a
           href="https://www.youtube.com/channel/UCBG8_B95XaOEubGhcMBMxgw"
           target="_blank"
           class="btn contact-details"
+          rel="noopener noreferrer"
           ><i class="fab fa-youtube"></i> YouTube</a
         >
-        <a href="mailto:nikanemami7@gmail.com" class="btn contact-details">
-          <i class="fas fa-at"></i> Send a mail
-        </a>
+        <a href="mailto:nikanemami7@gmail.com" class="btn contact-details"
+          ><i class="fas fa-at"></i> Send a mail</a
+        >
 
         <a href="tel:647-321-9685" class="btn contact-details"
           ><i class="fas fa-mobile-alt"></i> Call me</a
@@ -613,16 +377,40 @@
       </div>
     </section>
 
-    <footer>
-      <p>
-        Thank you for visiting my portfolio. If you are interested in
-        collaborating, have any questions, or just want to say hello, feel free
-        to reach out to me. I am always excited to connect with like-minded
-        professionals and explore new opportunities. Let's create something
-        extraordinary together.
-      </p>
+    <!-- Footer -->
+    <footer aria-label="Site Footer">
+      <div class="footer-content">
+        <div class="footer-message">
+          <p>
+            Thank you for visiting my portfolio. If you are interested in
+            collaborating, have any questions, or just want to say hello, feel free
+            to reach out to me. I am always excited to connect with like-minded
+            professionals and explore new opportunities. Let's create something
+            extraordinary together.
+          </p>
+        </div>
 
-      <p>&copy; Created by Nikan Emami</p>
+        <div class="footer-contact">
+          <p>&copy; 2025 Created by <strong>Nikan Emami</strong></p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="mailto:your.email@example.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4 4h16v16H4V4zm0 0l8 8m0 0l8-8"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM.21 6h4.52v12H.21V6zm7.63 0h4.34v1.56h.06c.6-1.14 2.06-2.34 4.23-2.34 4.52 0 5.36 2.98 5.36 6.86V18h-4.53v-5.37c0-1.28-.02-2.91-1.77-2.91-1.77 0-2.04 1.38-2.04 2.81V18H7.84V6z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/yourgithub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.17c0 4.53 2.87 8.38 6.84 9.74.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.35-3.37-1.35-.45-1.15-1.11-1.46-1.11-1.46-.91-.63.07-.62.07-.62 1.01.07 1.54 1.06 1.54 1.06.9 1.57 2.36 1.12 2.93.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.12-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.03a9.28 9.28 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.4.2 2.44.1 2.7.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.95.36.31.68.93.68 1.88 0 1.36-.01 2.46-.01 2.79 0 .26.18.58.69.48A10 10 0 0 0 22 12.17C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script
