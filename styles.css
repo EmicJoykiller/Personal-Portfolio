@@ -202,7 +202,7 @@ a:hover {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
-  color: var(--primary-white);
+  color: white;
   transition: background 0.3s ease;
   font-weight: 500;
   border-radius: 12px;
@@ -501,7 +501,7 @@ img {
 
 .contact-section-header p {
   font-size: 2rem;
-  color: var(--primary-gray);
+  color: var(--primary-white);
 }
 
 .contact-links {
@@ -510,11 +510,12 @@ img {
   flex-wrap: wrap;
   margin-top: 3rem;
   gap: 1rem;
+  color: var(--primary-white);
 }
 
 .contact-details {
   font-size: 2.2rem;
-  color: var(--primary-gray);
+  color: var(--primary-white);
   transition: transform 0.3s ease, color 0.3s ease;
   margin: 0 1rem;
   font-weight: 500;
@@ -895,3 +896,4 @@ footer {
     font-size: 2rem;
   }
 }
+
